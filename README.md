@@ -1,6 +1,6 @@
 # parent-skills —— 给中国家长的 AI Skills
 
-一组面向真实家庭情境的中文 AI skills：既帮助家长与老师沟通、和孩子对话，也提供以尊重、边界和专业转介为前提的育儿知识框架。
+一组面向真实家庭情境的中文 AI skills：既帮助家长与老师沟通、和孩子对话，也提供以尊重、边界和专业转介为前提的育儿与家庭知识框架。
 
 项目服务的是家长，而不是让孩子直接与 AI 对话。目标不是输出漂亮的模板，而是在需要开口的时刻，给出家长能说得出口、孩子或老师能听得进去的支持。
 
@@ -16,7 +16,7 @@
 
 `parent-setup` 不是必经步骤：若家长直接开始提问，`to-teacher` 和 `to-child` 会在缺少必要信息时简要追问。先完成设置则能让后续建议更贴合孩子年龄、家庭规则和沟通渠道。
 
-### 育儿与健康知识库
+### 育儿与家庭知识库
 
 | Skill | 主题 | 使用重点 |
 | --- | --- | --- |
@@ -27,6 +27,7 @@
 | [`child-social-problem-solving`](skills/child-social-problem-solving/SKILL.md) | 《如何培养孩子的社会能力》 | 用“我能解决问题”（ICPS）培养孩子处理冲突、分享、轮流、公平、挫折与害羞等日常社会问题的思考能力 |
 | [`self-driven-growth`](skills/self-driven-growth/SKILL.md) | 《自驱型成长》及《自驱型成长·实践篇》 | 以控制感、顾问型父母、非焦虑临在、共情沟通与励志访谈支持儿童和青少年的自主成长 |
 | [`nonviolent-communication`](skills/nonviolent-communication/SKILL.md) | 《非暴力沟通（修订版）》 | 以观察、感受、需要、请求和同理心处理指责、拒绝、愤怒、边界与冲突 |
+| [`happy-marriage`](skills/happy-marriage/SKILL.md) | 《幸福的婚姻（全新升级版）》 | 用戈特曼七大法则处理夫妻冲突、姻亲、金钱、家务、育儿分工与为人父母后的疏离；识别末日四骑士并优先转介家暴等专业风险 |
 
 这些知识库用于帮助 AI 找到合适的框架和实践建议；它们不替代诊断、治疗、药物调整或紧急安全判断。
 
@@ -53,6 +54,7 @@ ln -s ~/parent-skills/skills/spark-the-brain ~/.agents/skills/spark-the-brain
 ln -s ~/parent-skills/skills/child-social-problem-solving ~/.agents/skills/child-social-problem-solving
 ln -s ~/parent-skills/skills/self-driven-growth ~/.agents/skills/self-driven-growth
 ln -s ~/parent-skills/skills/nonviolent-communication ~/.agents/skills/nonviolent-communication
+ln -s ~/parent-skills/skills/happy-marriage ~/.agents/skills/happy-marriage
 ```
 
 若目录中已有同名链接或文件，请先确认其指向和用途，再决定是否替换；不要盲目覆盖已有配置。
@@ -71,12 +73,14 @@ ln -s ~/parent-skills/skills/nonviolent-communication ~/.agents/skills/nonviolen
 - “运动怎样帮助孩子在学习前进入状态？”
 - “孩子总抢同伴玩具，怎样引导他自己想办法解决？”
 - “孩子不愿意练琴，我怎样从控制转为支持他的自主性？”
+- “有了孩子后总为家务和管教方式吵架，怎么谈？”
 
 ## 设计原则与边界
 
 - **隐私默认最小化。** 家庭信息默认只留在当前对话；仅当家长明确说“保存”时，`parent-setup` 才会写入本机的 `~/.parent-skills/profile.md`。
 - **对老师：关系优先，也不回避红线。** 日常情境优先合作、核实和可持续沟通；涉及人身伤害、羞辱或歧视时，转为取证、书面留痕和阶梯式升级的建议。
 - **对孩子：先联结，再纠正；和善且坚定。** 默认不提供体罚、羞辱或把孩子标签化的做法。规则可以清晰，执行也可以坚定。
+- **对伴侣：技巧让位于安全。** 婚姻改善建议只适用于基本安全的关系；存在暴力、胁迫或控制时，优先安全与专业支持，不输出婚姻结局的预测或诊断。
 - **遇到安全或专业风险，先转介。** 疑似虐待、持续创伤反应、显著发育差异、自伤/他伤风险、严重精神或身体症状等，需要优先保障安全并联系合适的专业服务。
 - **建议为家长而写。** `to-child` 输出的是家长可转述和执行的话术，不面向孩子直接对话。
 
@@ -94,7 +98,8 @@ parent-skills/
 │   ├── spark-the-brain/         # 运动与大脑知识库与章节
 │   ├── child-social-problem-solving/ # 儿童社会问题解决（ICPS）知识库与章节
 │   ├── self-driven-growth/      # 自主成长与顾问型父母知识库与章节
-│   └── nonviolent-communication/ # 非暴力沟通知识库与章节
+│   ├── nonviolent-communication/ # 非暴力沟通知识库与章节
+│   └── happy-marriage/           # 幸福的婚姻知识库与章节
 ├── docs/
 │   └── requirements.md          # 沟通工具的需求与范围记录
 └── README.md
