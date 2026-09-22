@@ -25,6 +25,7 @@
 | [`taking-charge-of-adhd`](skills/taking-charge-of-adhd/SKILL.md) | 《如何养育多动症孩子》 | 评估准备、家庭行为计划、学校协作、执行功能支持，以及与临床团队沟通的准备 |
 | [`spark-the-brain`](skills/spark-the-brain/SKILL.md) | 《运动改造大脑》 | 谨慎地把运动与学习、压力、情绪、注意力、健康老化和习惯设计联系起来 |
 | [`child-social-problem-solving`](skills/child-social-problem-solving/SKILL.md) | 《如何培养孩子的社会能力》 | 用“我能解决问题”（ICPS）培养孩子处理冲突、分享、轮流、公平、挫折与害羞等日常社会问题的思考能力 |
+| [`self-driven-growth`](skills/self-driven-growth/SKILL.md) | 《自驱型成长》及《自驱型成长·实践篇》 | 以控制感、顾问型父母、非焦虑临在、共情沟通与励志访谈支持儿童和青少年的自主成长 |
 
 这些知识库用于帮助 AI 找到合适的框架和实践建议；它们不替代诊断、治疗、药物调整或紧急安全判断。
 
@@ -49,6 +50,7 @@ ln -s ~/parent-skills/skills/seeing-children ~/.agents/skills/seeing-children
 ln -s ~/parent-skills/skills/taking-charge-of-adhd ~/.agents/skills/taking-charge-of-adhd
 ln -s ~/parent-skills/skills/spark-the-brain ~/.agents/skills/spark-the-brain
 ln -s ~/parent-skills/skills/child-social-problem-solving ~/.agents/skills/child-social-problem-solving
+ln -s ~/parent-skills/skills/self-driven-growth ~/.agents/skills/self-driven-growth
 ```
 
 若目录中已有同名链接或文件，请先确认其指向和用途，再决定是否替换；不要盲目覆盖已有配置。
@@ -66,6 +68,7 @@ ln -s ~/parent-skills/skills/child-social-problem-solving ~/.agents/skills/child
 - “孩子疑似 ADHD，去评估前要准备什么？”
 - “运动怎样帮助孩子在学习前进入状态？”
 - “孩子总抢同伴玩具，怎样引导他自己想办法解决？”
+- “孩子不愿意练琴，我怎样从控制转为支持他的自主性？”
 
 ## 设计原则与边界
 
@@ -87,7 +90,8 @@ parent-skills/
 │   ├── seeing-children/         # 《看见孩子》知识库与章节
 │   ├── taking-charge-of-adhd/   # ADHD 家庭支持知识库与章节
 │   ├── spark-the-brain/         # 运动与大脑知识库与章节
-│   └── child-social-problem-solving/ # 儿童社会问题解决（ICPS）知识库与章节
+│   ├── child-social-problem-solving/ # 儿童社会问题解决（ICPS）知识库与章节
+│   └── self-driven-growth/      # 自主成长与顾问型父母知识库与章节
 ├── docs/
 │   └── requirements.md          # 沟通工具的需求与范围记录
 └── README.md
