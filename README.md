@@ -16,6 +16,14 @@
 
 `parent-setup` 不是必经步骤：若家长直接开始提问，`to-teacher` 和 `to-child` 会在缺少必要信息时简要追问。先完成设置则能让后续建议更贴合孩子年龄、家庭规则和沟通渠道。
 
+### 阅读工具
+
+| Skill | 适用场景 | 能提供什么 |
+| --- | --- | --- |
+| [`read-a-book`](skills/read-a-book/SKILL.md) | 使用本仓库的书籍知识库快速读懂一本书、精读重点、联系现实问题或检验理解 | 以六层阅读法建立全书地图、提炼框架、选择重点、导师式讲解、场景应用，并通过一次一题的互动练习形成行动计划 |
+
+`read-a-book` 提供阅读方法，不包含某一本书的知识。使用时应同时指定一个书籍 Skill，例如“使用 `read-a-book` 阅读 `taking-charge-of-adhd`”。
+
 ### 育儿与家庭知识库
 
 | Skill | 主题 | 使用重点 |
@@ -46,6 +54,9 @@ ln -s ~/parent-skills/skills/parent-setup ~/.agents/skills/parent-setup
 ln -s ~/parent-skills/skills/to-teacher ~/.agents/skills/to-teacher
 ln -s ~/parent-skills/skills/to-child ~/.agents/skills/to-child
 
+# 阅读工具
+ln -s ~/parent-skills/skills/read-a-book ~/.agents/skills/read-a-book
+
 # 按需安装知识库
 ln -s ~/parent-skills/skills/positive-discipline ~/.agents/skills/positive-discipline
 ln -s ~/parent-skills/skills/seeing-children ~/.agents/skills/seeing-children
@@ -74,6 +85,8 @@ ln -s ~/parent-skills/skills/happy-marriage ~/.agents/skills/happy-marriage
 - “孩子总抢同伴玩具，怎样引导他自己想办法解决？”
 - “孩子不愿意练琴，我怎样从控制转为支持他的自主性？”
 - “有了孩子后总为家务和管教方式吵架，怎么谈？”
+- “使用 `read-a-book` 帮我在 10 分钟内读懂 `positive-discipline`，再告诉我最值得精读什么。”
+- “用 `read-a-book` 和 `taking-charge-of-adhd` 考我，一次只出一道场景题。”
 
 ## 设计原则与边界
 
@@ -92,6 +105,7 @@ parent-skills/
 │   ├── parent-setup/            # 家庭上下文采访与可选本地保存
 │   ├── to-teacher/              # 家校沟通；含严重度与话术参考
 │   ├── to-child/                # 亲子沟通；含年龄、红线与话术参考
+│   ├── read-a-book/              # 编排书籍知识库的六层阅读教练
 │   ├── positive-discipline/     # 《正面管教》知识库与章节
 │   ├── seeing-children/         # 《看见孩子》知识库与章节
 │   ├── taking-charge-of-adhd/   # ADHD 家庭支持知识库与章节
